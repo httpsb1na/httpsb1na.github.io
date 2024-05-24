@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+a {
+    color: #872657;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #872657;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+/* Home Section */
+#welcome-banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#welcome-banner h1 {
+    font-size: 2.5em;
+}
+
+#welcome-banner p {
+    font-size: 1.2em;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about-container, .admissions-container, .news-container, .contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.history, .mission, .admission-process {
+    margin-top: 20px;
+}
+
+/* News Section */
+.news-article {
+    margin-top: 20px;
+}
+
+.news-article h3 {
+    color: #872657;
+}
+
+/* Contact Form */
+.contact-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.contact-container label {
+    display: block;
+}
+
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-container button {
+    grid-column: span 2;
+    background-color: #872657;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #a5304e;
+}
+
+/* Footer */
+footer {
+    background-color: #872657;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container, .contact-container form {
+        flex-direction: column;
+    }
+
+    .contact-container button {
+        grid-column: span 1;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+}
