@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <div class="header-container">
             <div class="logo">
@@ -22,18 +23,97 @@
                     <li><a href="#admissions">Admissions</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#resources" class="dropbtn">Resources</a>
+                        <div class="dropdown-content">
+                            <a href="#resource1">Resource 1</a>
+                            <a href="#resource2">Resource 2</a>
+                            <a href="#resource3">Resource 3</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Home Section -->
     <section id="home">
         <div class="welcome-banner">
             <h1>Welcome to Our School</h1>
             <p>Excellence in Education since 1950</p>
         </div>
+
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="photo1.jpg" alt="Slide 1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="photo2.jpg" alt="Slide 2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="photo3.jpg" alt="Slide 3" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- Custom Calendar -->
+        <div class="calendar-container">
+            <h2>Upcoming Events</h2>
+            <div id="calendar"></div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h2>Welcome to FDR High School</h2>
+            <p>Franklin Delano Roosevelt High School’s mission is to provide an environment that enables all students to grow academically, intellectually, socially and emotionally. At FDR, success equals Diversity, Equity, Empowerment and Persistence!</p>
+            <p>We recognize the importance of celebrating diversity and culture in our community. Our focus is on personalizing our environment; students start in different places. By developing a growth mindset, we help them activate their passion and persistence, so all students can reach their highest potential.</p>
+            <p>The FDR community works together so our students acquire the necessary skills and knowledge to be lifelong learners. Our students will become college and career ready and are prepared for the emerging demands as global citizens of the technologically evolving 21st Century.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <!-- Events Section -->
+        <div class="events-section">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>
+                    <span>May 24</span>
+                    <span>Bake Sale</span>
+                    <span>Time: 9 AM – 3:30 PM</span>
+                </li>
+                <li>
+                    <span>May 24</span>
+                    <span>Ice Cream Sale</span>
+                    <span>Time: 9 AM – 3 PM</span>
+                </li>
+                <li>
+                    <span>May 27</span>
+                    <span>Memorial Day - School Closed</span>
+                </li>
+                <li>
+                    <span>May 29</span>
+                    <span>PTA Meeting</span>
+                    <span>Time: 6:30 PM – 7:30 PM</span>
+                    <span>Location: Zoom</span>
+                </li>
+                <li>
+                    <span>May 31</span>
+                    <span>Ice Cream Sale</span>
+                    <span>Time: 9 AM – 3 PM</span>
+                </li>
+            </ul>
+            <a href="#">Show All Events</a>
+        </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <div class="about-container">
             <h2>About Us</h2>
@@ -49,23 +129,16 @@
         </div>
     </section>
 
+    <!-- Admissions Section -->
     <section id="admissions">
         <div class="admissions-container">
             <h2>Admissions</h2>
             <p>Join our school community! Find all the information you need to start your journey with us.</p>
-            <div class="admission-process">
-                <h3>Admission Process</h3>
-                <p>Our admission process is designed to be as straightforward and informative as possible. Here are the steps to apply to our school:</p>
-                <ul>
-                    <li>Visit our campus</li>
-                    <li>Meet our faculty and students</li>
-                    <li>Submit your application</li>
-                    <li>Attend an interview</li>
-                </ul>
-            </div>
+            <button onclick="location.href='#admissions'">Learn More</button>
         </div>
     </section>
 
+    <!-- News Section -->
     <section id="news">
         <div class="news-container">
             <h2>School News</h2>
@@ -80,6 +153,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <div class="contact-container">
             <h2>Contact Us</h2>
@@ -95,9 +169,22 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="footer-container">
-            <p>&copy; 2024 School Name. All rights reserved.</p>
+            <p>&copy; 2024 Franklin Delano Roosevelt High School. All rights reserved.</p>
+            <address>
+                5800 20th Avenue, Brooklyn, NY 11204<br>
+                Phone: (718) 621-8800<br>
+                Fax: (718) 232-9513<br>
+                Email: <a href="mailto:info@fdrhs.org">info@fdrhs.org</a>
+            </address>
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p>We are working to make this website easier to access for people with disabilities and will follow the Web Content Accessibility Guidelines 2.0, Level AA. If you need assistance with a particular page or document on our current site, please call 718-621-8800, email <a href="mailto:info@fdrhs.org">info@fdrhs.org</a>, or mail to: 5800 20th Avenue, Brooklyn, NY 11204 for assistance.</p>
         </div>
     </footer>
 </body>
