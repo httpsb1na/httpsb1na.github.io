@@ -10,11 +10,10 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    padding: 20px;
 }
 
 a {
-    color: #872657;
+    color: #ED2839;
     text-decoration: none;
 }
 
@@ -24,7 +23,7 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #872657;
+    background-color: #ED2839;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -49,50 +48,363 @@ nav ul li {
     margin-left: 20px;
 }
 
-/* Home Section */
-#welcome-banner {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #ED2839;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #c41c2f;
+}
+
+/* Welcome Banner */
+.welcome-banner {
     background: url('banner.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
 }
 
-#welcome-banner h1 {
+.welcome-banner h1 {
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-#welcome-banner p {
+.welcome-banner p {
     font-size: 1.2em;
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    margin-top: 20px;
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* About Section */
-.about-container, .admissions-container, .news-container, .contact-container {
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Calendar */
+.calendar-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.calendar-container h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+}
+
+#calendar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.month {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ED2839;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.weekdays, .days {
+    display: flex;
+    width: 100%;
+}
+
+.weekdays div, .days div {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+}
+
+.days div {
+    border: 1px solid #ddd;
+    margin: -1px;
+    transition: background-color 0.3s ease;
+}
+
+.days div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Info Section */
+.info-section {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
 }
 
-.history, .mission, .admission-process {
+.info-section h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    margin-bottom: 10px;
+}
+
+.info-section a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ED2839;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.info-section a:hover {
+    background-color: #c41c2f;
+}
+
+/* Events Section */
+.events-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.events-section h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+}
+
+.events-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.events-section ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.events-section ul li:last-child {
+    border-bottom: none;
+}
+
+.events-section span {
+    flex: 1;
+    text-align: left;
+}
+
+.events-section a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ED2839;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.events-section a:hover {
+    background-color: #c41c2f;
+}
+
+/* About Section */
+.about-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.about-container h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-container p {
+    margin-bottom: 10px;
+}
+
+.history, .mission {
     margin-top: 20px;
 }
 
+.history h3, .mission h3 {
+    color: #ED2839;
+    margin-bottom: 10px;
+}
+
+/* Admissions Section */
+.admissions-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.admissions-container h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+}
+
+.admissions-container p {
+    margin-bottom: 20px;
+}
+
+.admissions-container button {
+    background-color: #ED2839;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admissions-container button:hover {
+    background-color: #c41c2f;
+}
+
 /* News Section */
+.news-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.news-container h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .news-article {
     margin-top: 20px;
 }
 
 .news-article h3 {
-    color: #872657;
+    color: #ED2839;
+    margin-bottom: 10px;
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.contact-container h2 {
+    color: #ED2839;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .contact-container form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -110,30 +422,77 @@ section {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-container input[type="text"]:focus,
+.contact-container input[type="email"]:focus,
+.contact-container textarea:focus {
+    border-color: #ED2839;
+}
+
+.contact-container textarea {
+    grid-column: span 2;
+    resize: vertical;
 }
 
 .contact-container button {
     grid-column: span 2;
-    background-color: #872657;
+    background-color: #ED2839;
     color: #fff;
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .contact-container button:hover {
-    background-color: #a5304e;
+    background-color: #c41c2f;
 }
 
 /* Footer */
 footer {
-    background-color: #872657;
+    background-color: #ED2839;
     color: #fff;
     text-align: center;
-    padding: 10px 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 20px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-container address {
+    margin: 20px 0;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.footer-container address a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-container .footer-social {
+    margin: 20px 0;
+}
+
+.footer-container .footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-container .footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-container p {
+    margin: 10px 0;
 }
 
 /* Responsive Design */
@@ -149,5 +508,19 @@ footer {
     nav ul li {
         display: block;
         margin-top: 10px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .info-section, .events-section, .about-container, .admissions-container, .news-container, .contact-container, .footer-container {
+        max-width: 100%;
+        margin: 20px 10px;
+    }
+
+    .prev, .next {
+        font-size: 1.2em;
+        padding: 10px;
     }
 }
